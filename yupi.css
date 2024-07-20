@@ -1,0 +1,298 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #333;
+    background-color: #fce4ec; /* Warna pink muda */
+    line-height: 1.6;
+    animation: backgroundPulse 10s infinite alternate; /* Tambahkan efek animasi */
+}
+
+/* Efek Animasi Background */
+@keyframes backgroundPulse {
+    0% {
+        background-color: #fce4ec; /* Warna pink muda */
+    }
+    50% {
+        background-color: #f8bbd0; /* Warna pink yang lebih terang */
+    }
+    100% {
+        background-color: #fce4ec; /* Warna pink muda */
+    }
+}
+
+/* Header Styles */
+header {
+    background: #ff80ab; /* Pink cerah */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #ff4081; /* Garis bawah pink gelap */
+    animation: bounce 2s infinite; /* Tambahkan efek animasi */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    animation: colorChange 4s infinite; /* Tambahkan efek animasi */
+}
+
+@keyframes colorChange {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: #ff4081; /* Pink gelap */
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s; /* Tambahkan transisi */
+}
+
+nav ul li a:hover {
+    color: #fce4ec; /* Warna pink muda */
+    background-color: #ff4081; /* Pink gelap */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transform: scale(1.2); /* Efek zoom saat hover */
+}
+
+/* Banner Styles */
+.banner {
+    background: url('../images/banner.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-out; /* Tambahkan efek animasi */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: textPulse 1.5s infinite; /* Tambahkan efek animasi */
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+    }
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out; /* Tambahkan efek animasi */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tentang Section */
+.tentang h2 {
+    background: #ff4081; /* Pink gelap */
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    animation: rotate 2s linear infinite; Tambahkan efek animasi */
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: #ff80ab; /* Pink cerah */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 5px solid #ff4081; /* Garis atas pink gelap */
+    animation: bounce 2s infinite; /* Tambahkan efek animasi */
+}
+
+/* Link Styles */
+a {
+    color: #ff4081; /* Pink gelap */
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ff80ab; /* Pink cerah */
+    text-decoration: none;
+}
+
+/* Galeri Styles */
+.galeri .foto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.galeri .foto img {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Tambahkan transisi */
+}
+
+.galeri .foto img:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Efek bayangan lebih gelap */
+}
+
+/* Video Styles */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.video-item {
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s; /* Tambahkan transisi */
+}
+
+.video-item:hover {
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+.video-item img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Kontak Form Styles */
+.kontak form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.kontak form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.kontak form input, .kontak form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ff80ab; /* Pink cerah */
+}
+
+.kontak form button {
+    background: #ff4081; /* Pink gelap */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.kontak form button:hover {
+    background: #ff80ab; /* Pink cerah */
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+/* Testimoni Styles */
+.testimoni-item {
+    background: #ffebee; /* Pink sangat muda */
+    border-left: 5px solid #ff4081; /* Pink gelap */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: shake 0.5s
+}
